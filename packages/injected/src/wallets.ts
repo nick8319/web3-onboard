@@ -64,6 +64,16 @@ const metamask: InjectedWalletModule = {
   platforms: ['all']
 }
 
+const keplr: InjectedWalletModule = {
+  label: ProviderLabel.Keplr,
+  injectedNamespace: InjectedNameSpace.Keplr,
+  checkProviderIdentity: ({ provider }) =>
+    !!provider && !!provider[ProviderIdentityFlag.Keplr],
+  getIcon: async () => (await import('./icons/keplr.js')).default,
+  getInterface: getInjectedInterface(ProviderIdentityFlag.Keplr),
+  platforms: ['desktop']
+}
+
 const exodus: InjectedWalletModule = {
   label: ProviderLabel.Exodus,
   injectedNamespace: InjectedNameSpace.Ethereum,

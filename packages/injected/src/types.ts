@@ -26,6 +26,7 @@ export enum ProviderIdentityFlag {
   HuobiWallet = 'isHbWallet',
   HyperPay = 'isHyperPay',
   ImToken = 'isImToken',
+  Keplr = 'version',
   Liquality = 'isLiquality',
   MeetOne = 'wallet',
   MetaMask = 'isMetaMask',
@@ -67,6 +68,7 @@ export enum ProviderLabel {
   HuobiWallet = 'Huobi Wallet',
   HyperPay = 'HyperPay',
   ImToken = 'imToken',
+  Keplr = 'Keplr',
   Liquality = 'Liquality',
   MeetOne = 'MeetOne',
   MetaMask = 'MetaMask',
@@ -110,13 +112,15 @@ export enum InjectedNameSpace {
   GameStop = 'gamestop',
   BitKeep = 'bitkeep',
   Avalanche = 'avalanche',
-  Bitski = 'Bitski'
+  Bitski = 'Bitski',
+  Keplr = 'keplr'
 }
 
 export interface CustomWindow extends Window {
   BinanceChain: BinanceProvider
   ethereum: InjectedProvider
   tally: InjectedProvider
+  keplr: InjectedProvider
   web3: ExternalProvider | MeetOneProvider
   arbitrum: InjectedProvider
   xfi: {

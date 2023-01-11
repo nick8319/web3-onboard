@@ -9,6 +9,7 @@ export const WALLET_NAMES: { [key: string]: string } = {
   bitski: 'Bitski',
   coinbasewallet: 'Coinbase Wallet',
   dcentwallet: "D'CENT",
+  keplr: 'Keplr',
   metamask: 'MetaMask',
   detected: 'Detected Wallet',
   meetone: 'MeetOne',
